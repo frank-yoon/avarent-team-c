@@ -1,0 +1,6 @@
+//Frank
+
+function onChange () {
+	console.log(Xrm);
+console.log($("body"));
+}
