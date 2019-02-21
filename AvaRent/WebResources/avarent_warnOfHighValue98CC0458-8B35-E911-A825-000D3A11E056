@@ -7,6 +7,13 @@ function showWarning(executionContext) {
 	}
 }
 
-function appendStyle () {
+function appendStyle() {
 	parent.$("head").append("<style>#crmNotifications { background-color: purple; } #Notification0_text { color: white !important; }</style>");
+}
+
+function setIframe() {
+	var value = Xrm.Page.getAttribute("websiteurl").getValue();
+	if (value) {
+		Xrm.Page.getControl("IFRAME_tenantwebsite").setSrc(value);		
+	}
 }
