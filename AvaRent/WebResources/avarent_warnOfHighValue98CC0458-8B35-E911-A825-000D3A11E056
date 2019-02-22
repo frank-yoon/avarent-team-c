@@ -1,9 +1,9 @@
 function showWarning(executionContext) {
-	var formContext = executionContext.getFormContext();  
+	var formContext = executionContext.getFormContext();
 	if (Xrm.Page.getAttribute("avarent_highvalue").getValue()) {
-		formContext.ui.setFormNotification("High Value Tenant", "WARNING", "highValueWarning");  
+		formContext.ui.setFormNotification("High Value Tenant", "WARNING", "highValueWarning");
 	} else {
-		formContext.ui.clearFormNotification("highValueWarning");  
+		formContext.ui.clearFormNotification("highValueWarning");
 	}
 }
 
@@ -14,6 +14,6 @@ function appendStyle() {
 function setIframe() {
 	var value = Xrm.Page.getAttribute("websiteurl").getValue();
 	if (value) {
-		Xrm.Page.getControl("IFRAME_tenantwebsite").setSrc(value);		
+		Xrm.Page.getControl("IFRAME_tenantwebsite").setSrc(value);
 	}
 }
